@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des Eleves</title>
+</head>
+<body>
+    <h1>Liste des Eleves</h1>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.first_name }} {{ student.last_name }} - {{ student.email }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'student_create' %}">Add a new student</a>
+</body>
+</html>
